@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.texts{
+    margin-top: 90px;
+}
+@media screen and (min-width: 412px){
+    .texts {
+        position: absolute;
+        margin-top: 25px;
+    }
+    p {
+        margin-top: -1rem;
+    }
+    #img {
+        width: 25rem;
+        height: 25rem;
+        position: relative;
+        margin-bottom: 80px;
+        margin-top: 25rem;
+    }
+}
+
+button{
+    background-color: #202020;
+    color: aliceblue;
+    border-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+header{
+    padding-bottom: 15%;
+}
