@@ -7,7 +7,7 @@
 .texts{
     margin-top: 90px;
 }
-@media screen and (min-width: 412px){
+@media screen and (max-width: 500px){
     .texts {
         position: absolute;
         margin-top: 25px;
@@ -23,6 +23,33 @@
         margin-top: 25rem;
     }
 }
+@media (min-width: 700px) and (max-width: 1000px){
+    .texts {
+        position: absolute;
+        margin-top: 25px;
+    }
+    p {
+        margin-top: -1rem;
+    }
+    #img {
+        width: 35rem;
+        height: 35rem;
+        position: relative;
+        margin-bottom: 80px;
+        margin-left: 75px;
+        margin-top: 20rem;
+    }
+}
+@media (min-width: 1001px) {
+    #img {
+        width: 35rem;
+        height: 35rem;
+        position: relative;
+        margin-bottom: 80px;
+        margin-left: 75px;
+        margin-top: 1rem;
+    }
+}
 
 button{
     background-color: #202020;
@@ -36,4 +63,5 @@ button{
 
 header{
     padding-bottom: 15%;
+    background-color: rgb(171 205 207);
 }
