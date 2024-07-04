@@ -5,10 +5,10 @@
     border-radius: 5px;
     border: 2px solid black;
 }
-p{
+.creditCard p{
     color: rgb(207, 207, 207);
     font-size: 20px;
 }
-span{
+.creditCard span{
     margin-right: 10px;
 }
