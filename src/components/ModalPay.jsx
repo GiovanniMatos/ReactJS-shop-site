@@ -2,12 +2,18 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import "../css/Modal.css"
 
 export default function ModalPay({text}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [numberCard, setNumberCard] = useState("0000 0000 0000 0000")
+  const [name, setName] = useState("Seu nome completo")
+  const [date, setDate] = useState("00/00")
+  const [cvv, setCvv] = useState("123")
 
   return (
     <>
@@ -21,8 +27,10 @@ export default function ModalPay({text}) {
         </Modal.Header>
         <Modal.Body>
           <Form>
-            <Form.Control type="email" placeholder="Seu email" />
-            <Form.Control type="name" placeholder='Seu nome completo' />
+            <Form.Control type="number_format" placeholder="Número do Cartão" onChange={(e)=>setNumberCard(e.target.value)} />
+            <Form.Control type="name" placeholder='Seu nome completo' onChange={(e)=>setName(e.target.value)} />
+            <Form.Control type="number_format" placeholder='Data de vencimento' onChange={(e)=>setDate(e.target.value)} />
+            <Form.Control type="number_format" placeholder='CVV' onChange={(e)=>setCvv(e.target.value)} />
             <Form.Control 
             type="number_format" 
             placeholder='seu cpf no formato: xxx.xxx.xxx-xx' 
@@ -37,6 +45,13 @@ export default function ModalPay({text}) {
             Close
           </Button>
         </Modal.Footer>
+          <div className="creditCard">
+            <p>{numberCard}<br/>
+            {name}<br/>
+            <span>{date}</span>
+            {cvv}
+            </p>
+          </div>
       </Modal>
     </>
   );

@@ -1,0 +1,14 @@
+.creditCard{
+    height: 10rem;
+    width: 17rem;
+    background-color: blueviolet;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+p{
+    color: rgb(207, 207, 207);
+    font-size: 20px;
+}
+span{
+    margin-right: 10px;
+}
