@@ -8,7 +8,18 @@
 .creditCard p{
     color: rgb(207, 207, 207);
     font-size: 20px;
+    margin-left: 20px;
 }
 .creditCard span{
     margin-right: 10px;
+}
+
+.chip{
+    height: 25px;
+    width: 50px;
+    background-color: rgb(240, 171, 53);
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom:-29px;
+    border-radius: 5px;
 }

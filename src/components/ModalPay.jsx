@@ -46,6 +46,7 @@ export default function ModalPay({text}) {
           </Button>
         </Modal.Footer>
           <div className="creditCard">
+            <div className="chip"></div>
             <p>{numberCard}<br/>
             {name}<br/>
             <span>{date}</span>
