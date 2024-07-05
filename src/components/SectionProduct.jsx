@@ -2,7 +2,7 @@ import '../css/SectionProduct.css'
 import Product from './Product'
 import ModalProduct from './ModalProduct'
 import fone from '../assets/maxphoneindex.png'
-import fone2 from '../assets/foneJBL.png'
+// import fone2 from '../assets/foneJBL.png'
 
 export default function SectionProduct(){
     const amazonLink = "https://www.amazon.com.br/Headphone-Bluetooth-Microfone-Cancelamento-Original/dp/B0CZS56RDJ/ref=asc_df_B0CZS6CBMC/?tag=googleshopp00-20&linkCode=df0&hvadid=647438375017&hvpos=&hvnetw=g&hvrand=1574642814790402213&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9101719&hvtargid=pla-2316011700901&mcid=8d921423da96343099aba0b5441fff1f&th=1"
@@ -12,6 +12,23 @@ export default function SectionProduct(){
         <section>
             <div>
                 <h2 id="disponivel">Disponível</h2>
+
+                <Product 
+                image={fone} title="teste" text="teste"
+                buttonModal={ <ModalProduct 
+                textButton="Comprar Aqui" 
+                imagemFone={fone} 
+                tituloDescricao="Nome Teste"
+                paragrafoDescricao="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+                mollit anim id est laborum." 
+                /> } /> 
+                {/* href="/product" */}
 
                 <Product image={fone} title="teste" text="teste" 
                 buttonProduct={<ModalProduct 
@@ -31,23 +48,6 @@ export default function SectionProduct(){
                 textButton="Comprar na Aliexpress"
                 href={aliexpressLink}/>} />
 
-                <Product 
-                image={fone} title="teste" text="teste"
-                buttonModal={ <ModalProduct 
-                textButton="Comprar Aqui" 
-                imagemFone={fone2} 
-                tituloDescricao="Nome Teste"
-                paragrafoDescricao="Lorem ipsum dolor sit amet, 
-                   consectetur adipiscing elit, 
-                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                   nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                   mollit anim id est laborum." 
-                /> } />
-
-                {/* href="/product" */}
             </div>
             
         </section>
