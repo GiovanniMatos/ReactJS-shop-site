@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import "../css/Modal.css"
 
-export default function ModalPay({text}) {
+export default function TesteModalPay({text}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -18,7 +18,7 @@ export default function ModalPay({text}) {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        {text}
+        Comprar
       </Button>
 
       <Modal show={show} onHide={handleClose}>

@@ -1,30 +1,22 @@
 import './App.css'
-import Header from './components/Header'
-import Product from './components/Product'
-import SectionProduct from './components/SectionProduct'
-import Footer from './components/Footer'
-import fone from './assets/maxphoneindex.png'
+import AboutPage from './routes/AboutPage'
+import Home from './components/Home'
+import ProductPage from './components/ProductPage';
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 function App() {
   
   return (
     <>
-      <Header 
-      name="Maxphone P9 Bluetooth"
-      p="Lorem ipsum dolor sit amet, 
-      consectetur adipiscing elit, 
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-      mollit anim id est laborum."
-      image={fone} 
-      />
-      <div className="products" id="products">
-        <SectionProduct />
-      </div>
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={ <Home /> } />
+          <Route path="/product" element={ <ProductPage /> } />
+          <Route path="/product2" element={ <ProductPage /> } />
+          <Route path="/about" element={ <AboutPage /> } />
+        </Routes>
+      </BrowserRouter>
+      
     </>
   )
 }
