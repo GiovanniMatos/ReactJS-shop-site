@@ -32,6 +32,13 @@
     margin-top: -40px;
 }
 
-img{
+#imagemModal{
     width: 28rem;
+}
+
+@media (min-width: 380px) and (max-width: 600px){
+    #imagemModal{
+        width: 25rem;
+        margin-left: -20px;
+    }
 }

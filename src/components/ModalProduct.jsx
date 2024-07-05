@@ -23,7 +23,7 @@ export default function ModalProduct({textButton, href, tituloDescricao, paragra
         <Modal.Body>
 
           <div className="wrapperModal">
-            <img src={imagemFone} />
+            <img id="imagemModal" src={imagemFone} />
             <div className="descricao">
               <h2>{tituloDescricao}</h2>
               <p>{paragrafoDescricao}</p>
