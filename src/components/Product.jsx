@@ -1,9 +1,9 @@
 // import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import ModalProduct from './ModalProduct';
+// import ModalProduct from './ModalProduct';
 import '../css/Product.css'
 
-export default function Product({image, title, text, href}) {
+export default function Product({image, title, text, buttonModal, buttonProduct}) {
   
   return (
     <div className="card">
@@ -14,7 +14,8 @@ export default function Product({image, title, text, href}) {
           <Card.Text>
             {text}
           </Card.Text>
-          <ModalProduct text="Ver Produto" href={href}/>
+          {buttonModal}
+          {buttonProduct}
         </Card.Body>
       </Card>
     </div>

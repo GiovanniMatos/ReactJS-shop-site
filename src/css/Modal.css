@@ -23,3 +23,11 @@
     margin-bottom:-29px;
     border-radius: 5px;
 }
+
+.descricao p{
+    margin-top: -40px;
+}
+
+#formaPagamento{
+    margin-top: -40px;
+}
