@@ -7,7 +7,7 @@ export default function Product({image, title, text, buttonModal, buttonProduct}
   
   return (
     <div className="card">
-      <Card style={{ width: '18rem', display: 'inline-flex' }}>
+      <Card style={{ display: 'inline-flex' }}>
         <Card.Img variant="top" src={image} style={{height: "19rem"}} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>

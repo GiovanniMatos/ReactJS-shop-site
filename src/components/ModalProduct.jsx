@@ -12,7 +12,7 @@ export default function ModalProduct({textButton, href, tituloDescricao, paragra
 
   return (
     <>
-      <Button variant="primary" href={href} onClick={handleShow}>
+      <Button variant="primary" href={href} onClick={handleShow} id="botaoModal">
         {textButton}
       </Button>
 

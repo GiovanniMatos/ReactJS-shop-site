@@ -1,6 +1,15 @@
 .card {
     display: inline-flex;
+    width: 18rem;
     align-items: center;
     color: rgb(228, 228, 228);
     background-color: rgb(52, 52, 52);
+}
+
+@media (min-width: 400px) and (max-width: 700px){
+    .card{
+        width: 10rem;
+        height: 21rem;
+        margin-bottom: 10px;
+    }
 }

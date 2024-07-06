@@ -41,4 +41,8 @@
         width: 25rem;
         margin-left: -20px;
     }
+    #botaoModal{
+        height: 1px;
+        padding-bottom: 50px;
+    }
 }

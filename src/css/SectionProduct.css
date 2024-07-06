@@ -10,3 +10,9 @@ section{
 #disponivel{
     color: rgb(34, 211, 34);
 }
+
+@media (min-width: 400px) and (max-width: 700px){
+    section{
+        height: 50rem;
+    }
+}

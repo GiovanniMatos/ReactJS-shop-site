@@ -12,41 +12,42 @@ export default function SectionProduct(){
         <section>
             <div>
                 <h2 id="disponivel">Disponível</h2>
+                <div className="cards">
+                    <Product id="card1"
+                    image={fone} title="teste" text="teste"
+                    buttonModal={ <ModalProduct 
+                    textButton="Comprar Aqui" 
+                    imagemFone={fone} 
+                    tituloDescricao="Nome Teste"
+                    paragrafoDescricao="Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+                    mollit anim id est laborum." 
+                    /> } /> 
+                    {/* href="/product" */}
 
-                <Product 
-                image={fone} title="teste" text="teste"
-                buttonModal={ <ModalProduct 
-                textButton="Comprar Aqui" 
-                imagemFone={fone} 
-                tituloDescricao="Nome Teste"
-                paragrafoDescricao="Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                mollit anim id est laborum." 
-                /> } /> 
-                {/* href="/product" */}
+                    <Product image={fone} title="teste" text="teste" 
+                    buttonProduct={<ModalProduct 
+                    tituloDescricao="Redirecionando"
+                    textButton="Comprar na Shopee"
+                    href={shopeeLink}/>} />
 
-                <Product image={fone} title="teste" text="teste" 
-                buttonProduct={<ModalProduct 
-                tituloDescricao="Redirecionando"
-                textButton="Comprar na Shopee"
-                href={shopeeLink}/>} />
+                    <Product image={fone} title="teste" text="teste" 
+                    buttonProduct={<ModalProduct 
+                    tituloDescricao="Redirecionando"
+                    textButton="Comprar na Amazon"
+                    href={amazonLink}/>} />
 
-                <Product image={fone} title="teste" text="teste" 
-                buttonProduct={<ModalProduct 
-                tituloDescricao="Redirecionando"
-                textButton="Comprar na Amazon"
-                href={amazonLink}/>} />
-
-                <Product image={fone} title="teste" text="teste"
-                buttonProduct={<ModalProduct 
-                tituloDescricao="Redirecionando"
-                textButton="Comprar na Aliexpress"
-                href={aliexpressLink}/>} />
+                    <Product image={fone} title="teste" text="teste"
+                    buttonProduct={<ModalProduct 
+                    tituloDescricao="Redirecionando"
+                    textButton="Comprar na Aliexpress"
+                    href={aliexpressLink}/>} />
+                </div>
 
             </div>
             
