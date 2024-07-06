@@ -2,6 +2,7 @@ import Header from './Header'
 import SectionProduct from './SectionProduct'
 import Footer from './Footer'
 import fone from '../assets/maxphoneindex.png'
+import '../css/Home.css'
 
 export default function Home() {
     return(
