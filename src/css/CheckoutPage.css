@@ -1,0 +1,17 @@
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.form{
+    width: 35vh;
+}
+
+#valor{
+    font-size: 20px;
+}
+
+#spanValor{
+    color: #44cc5d;
+    font-size: 25px;
+}

@@ -16,6 +16,7 @@ export default function SectionProduct(){
                     <Product id="card1"
                     image={fone} title="teste" text="teste"
                     buttonModal={ <ModalProduct 
+                    href="/checkout"
                     textButton="Comprar Aqui" 
                     imagemFone={fone} 
                     tituloDescricao="Nome Teste"
