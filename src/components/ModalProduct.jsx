@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 // import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
-import "../css/Modal.css"
+import "../css/ModalCartao.css"
 
 export default function ModalProduct({textButton, href, tituloDescricao, paragrafoDescricao, imagemFone}) {
   const [show, setShow] = useState(false);

@@ -2,9 +2,9 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
-import "../css/Modal.css"
+import "../css/ModalCartao.css"
 
-export default function TesteModalPay({text}) {
+export default function ModalCartao({total}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -17,8 +17,8 @@ export default function TesteModalPay({text}) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Comprar
+      <Button variant="dark" onClick={handleShow}>
+        Cartão de Crédito
       </Button>
 
       <Modal show={show} onHide={handleClose}>
@@ -26,15 +26,11 @@ export default function TesteModalPay({text}) {
           <Modal.Title>Pagar com Cartão de Crédito</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form >
             <Form.Control type="number_format" placeholder="Número do Cartão" onChange={(e)=>setNumberCard(e.target.value)} />
             <Form.Control type="name" placeholder='Seu nome completo' onChange={(e)=>setName(e.target.value)} />
             <Form.Control type="number_format" placeholder='Data de vencimento' onChange={(e)=>setDate(e.target.value)} />
             <Form.Control type="number_format" placeholder='CVV' onChange={(e)=>setCvv(e.target.value)} />
-            <Form.Control 
-            type="number_format" 
-            placeholder='seu cpf no formato: xxx.xxx.xxx-xx' 
-            pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" />
             <Button variant="primary" type="submit">
                 Enviar
             </Button>
@@ -45,6 +41,7 @@ export default function TesteModalPay({text}) {
             Close
           </Button>
         </Modal.Footer>
+          <h4>Valor total: <span id="spanValor">R${total}</span></h4>
           <div className="creditCard">
             <div className="chip"></div>
             <p>{numberCard}<br/>
