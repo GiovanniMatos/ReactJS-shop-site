@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import "../css/ModalCartao.css"
 
-export default function ModalCartao({total}) {
+export default function ModalCartao({total, nome, email, cpf}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -14,7 +14,9 @@ export default function ModalCartao({total}) {
   const [name, setName] = useState("Seu nome completo")
   const [date, setDate] = useState("00/00")
   const [cvv, setCvv] = useState("123")
-
+  const nomeNoCheckout = [nome]
+  const emailNoCheckout = [email]
+  const cpfNoCheckout = [cpf]
   return (
     <>
       <Button variant="dark" onClick={handleShow}>
@@ -26,9 +28,13 @@ export default function ModalCartao({total}) {
           <Modal.Title>Pagar com Cartão de Crédito</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <h5>Dados do pagador:</h5>
+          <p>{nome}</p>
+          <p>{email}</p>
+          <p>{cpf}</p>
           <Form >
             <Form.Control type="number_format" placeholder="Número do Cartão" onChange={(e)=>setNumberCard(e.target.value)} />
-            <Form.Control type="name" placeholder='Seu nome completo' onChange={(e)=>setName(e.target.value)} />
+            <Form.Control type="name" placeholder='Seu nome completo' defaultValue={nome} />
             <Form.Control type="number_format" placeholder='Data de vencimento' onChange={(e)=>setDate(e.target.value)} />
             <Form.Control type="number_format" placeholder='CVV' onChange={(e)=>setCvv(e.target.value)} />
             <Button variant="primary" type="submit">
@@ -45,7 +51,7 @@ export default function ModalCartao({total}) {
           <div className="creditCard">
             <div className="chip"></div>
             <p>{numberCard}<br/>
-            {name}<br/>
+            {nome}<br/>
             <span>{date}</span>
             {cvv}
             </p>

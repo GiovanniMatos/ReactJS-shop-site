@@ -5,14 +5,26 @@ import { useState } from 'react'
 import ModalCartao from '../components/ModalCartao'
 
 
-export default function CheckoutPage({email, nome, cpf, quant}){
-
+export default function CheckoutPage(){
     const [quantidade, setQuantidade] = useState(1)
+    const  [email, setEmail] = useState()
+    const  [nome, setNome] = useState()
+    const [cpf, setCpf] = useState()
+
     const valor = 35;
     const total = quantidade * valor;
     
     function defineQuantidade(event){
         setQuantidade(event.target.value)
+    }
+    function defineEmail(event){
+        setEmail(event.target.value)
+    }
+    function defineNome(event){
+        setNome(event.target.value)
+    }
+    function defineCPF(event){
+        setCpf(event.target.value)
     }
 
     const [validated, setValidated] = useState(false);
@@ -23,7 +35,6 @@ export default function CheckoutPage({email, nome, cpf, quant}){
         event.preventDefault();
         event.stopPropagation();
       }
-  
       setValidated(true);
     };
 
@@ -37,14 +48,15 @@ export default function CheckoutPage({email, nome, cpf, quant}){
                     <h2>Maxphone P9</h2>
                     <p>Descrição aqui</p>
                     <Form noValidate validated={validated} onSubmit={handleSubmit} className='form'>
-                        <Form.Control type="email" placeholder='Email para receber atualizações do envio' defaultValue={email} required/>
-                        <Form.Control type="name" placeholder='Seu nome completo' defaultValue={nome} required/>
+                        <Form.Control type="email" placeholder='Email para receber atualizações do envio' required onChange={defineEmail}/>
+                        <Form.Control type="name" placeholder='Seu nome completo' required onChange={defineNome}/>
                         <Form.Control 
                         type="number_format" 
                         placeholder='seu cpf no formato: xxx.xxx.xxx-xx' 
-                        pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" />
-                        <Form.Control type='number' placeholder='Quantidade' defaultValue={quant} onChange={defineQuantidade} required/>
-                        <ModalCartao total={total}/>
+                        pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
+                        onChange={defineCPF} />
+                        <Form.Control type='number' placeholder='Quantidade' onChange={defineQuantidade} required/>
+                        <ModalCartao total={total} email={email} nome={nome} cpf={cpf} />
                     </Form>
                     <p id="valor"><b>Valor:</b> <span id="spanValor">R${total}</span></p>
                 </div>
