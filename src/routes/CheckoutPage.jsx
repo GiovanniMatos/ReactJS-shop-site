@@ -55,7 +55,8 @@ export default function CheckoutPage(){
                         placeholder='seu cpf no formato: xxx.xxx.xxx-xx' 
                         pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
                         onChange={defineCPF} />
-                        <Form.Control type='number' placeholder='Quantidade' onChange={defineQuantidade} required/>
+                        <Form.Control type='number' placeholder='Quantidade' onChange={defineQuantidade} defaultValue={quantidade} required/>
+                        <p><b>Formas de Pagamento: </b></p>
                         <ModalCartao total={total} email={email} nome={nome} cpf={cpf} />
                     </Form>
                     <p id="valor"><b>Valor:</b> <span id="spanValor">R${total}</span></p>
