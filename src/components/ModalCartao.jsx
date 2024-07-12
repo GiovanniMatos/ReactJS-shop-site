@@ -29,23 +29,22 @@ export default function ModalCartao({total, nome, email, cpf}) {
         </Modal.Header>
         <Modal.Body>
           <h5>Dados do pagador:</h5>
-          <p>{nome}</p>
-          <p>{email}</p>
-          <p>{cpf}</p>
+          <p>
+            <b>Nome:</b> {nomeNoCheckout}<br/>
+            <b>Email:</b> {emailNoCheckout}<br/>
+            <b>CPF:</b> {cpfNoCheckout}
+          </p>
           <Form >
             <Form.Control type="number_format" placeholder="Número do Cartão" onChange={(e)=>setNumberCard(e.target.value)} />
             <Form.Control type="name" placeholder='Seu nome completo' defaultValue={nome} />
             <Form.Control type="number_format" placeholder='Data de vencimento' onChange={(e)=>setDate(e.target.value)} />
             <Form.Control type="number_format" placeholder='CVV' onChange={(e)=>setCvv(e.target.value)} />
-            <Button variant="primary" type="submit">
-                Enviar
+            <Button variant="success" type="submit">
+                Pagar
             </Button>
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
         </Modal.Footer>
           <h4>Valor total: <span id="spanValor">R${total}</span></h4>
           <div className="creditCard">

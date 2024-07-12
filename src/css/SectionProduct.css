@@ -11,8 +11,16 @@ section{
     color: rgb(34, 211, 34);
 }
 
-@media (min-width: 400px) and (max-width: 700px){
+@media (min-width: 389px) and (max-width: 750px){
     section{
-        height: 50rem;
+        height: 52rem;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 752px) and (max-width: 1030px){
+    section{
+        height: 65rem;
+        margin-bottom: 10px;
     }
 }

@@ -4,7 +4,7 @@ main {
 }
 
 .form{
-    width: 38vh;
+    width: 63vh;
 }
 
 #valor{
@@ -14,4 +14,31 @@ main {
 #spanValor{
     color: #44cc5d;
     font-size: 25px;
+}
+
+@media (min-width: 389px) and (max-width: 750px){
+    #imagemCheckout{
+        height: 20rem;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .form{
+        width: 38vh;
+    }
+}
+@media (min-width: 751px) and (max-width: 1030px){
+    #imagemCheckout{
+        height: 25rem;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .form{
+        width: 48vh;
+    }
 }

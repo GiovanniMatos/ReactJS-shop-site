@@ -42,7 +42,7 @@ export default function CheckoutPage(){
         <>
             <main>
                 <article>
-                    <img src={fone} />
+                    <img id="imagemCheckout" src={fone} />
                 </article>
                 <div className='textsCheckout'>
                     <h2>Maxphone P9</h2>
