@@ -30,24 +30,6 @@ export default function SectionProduct(){
                     mollit anim id est laborum." 
                     /> } /> 
                     {/* href="/product" */}
-
-                    <Product image={fone} title="teste" text="teste" 
-                    buttonProduct={<ModalProduct 
-                    tituloDescricao="Redirecionando"
-                    textButton="Comprar na Shopee"
-                    href={shopeeLink}/>} />
-
-                    <Product image={fone} title="teste" text="teste" 
-                    buttonProduct={<ModalProduct 
-                    tituloDescricao="Redirecionando"
-                    textButton="Comprar na Amazon"
-                    href={amazonLink}/>} />
-
-                    <Product image={fone} title="teste" text="teste"
-                    buttonProduct={<ModalProduct 
-                    tituloDescricao="Redirecionando"
-                    textButton="Comprar na Aliexpress"
-                    href={aliexpressLink}/>} />
                 </div>
 
             </div>

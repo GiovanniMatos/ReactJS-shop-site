@@ -46,7 +46,7 @@ export default function CheckoutPage(){
                 </article>
                 <div className='textsCheckout'>
                     <h2>Maxphone P9</h2>
-                    <p>Descrição aqui</p>
+                    <p>AQUI SERÁ INTEGRADO UM GATEWAY DE PAGAMENTO</p>
                     <Form noValidate validated={validated} onSubmit={handleSubmit} className='form'>
                         <Form.Control type="email" placeholder='Email para receber atualizações do envio' required onChange={defineEmail}/>
                         <Form.Control type="name" placeholder='Seu nome completo' required onChange={defineNome}/>

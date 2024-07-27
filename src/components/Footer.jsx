@@ -1,5 +1,5 @@
 import '../css/Footer.css'
-import cardImg from '../assets/cardImg.png'
+import cardImg from '../assets/payments.png'
 import criptoImg from '../assets/criptoImg.png'
 
 export default function Footer(){

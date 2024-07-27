@@ -13,7 +13,7 @@ export default function ModalCartao({total, nome, email, cpf}) {
   const [numberCard, setNumberCard] = useState("0000 0000 0000 0000")
   const [name, setName] = useState("Seu nome completo")
   const [date, setDate] = useState("00/00")
-  const [cvv, setCvv] = useState("123")
+  const [cvv, setCvv] = useState("000")
   const nomeNoCheckout = [nome]
   const emailNoCheckout = [email]
   const cpfNoCheckout = [cpf]
