@@ -13,14 +13,14 @@ section{
 
 @media (min-width: 389px) and (max-width: 750px){
     section{
-        height: 52rem;
+        height: 28rem;
         margin-bottom: 10px;
     }
 }
 
 @media (min-width: 752px) and (max-width: 1030px){
     section{
-        height: 65rem;
+        height: 40rem;
         margin-bottom: 10px;
     }
 }
