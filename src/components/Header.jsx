@@ -7,7 +7,7 @@ export default function Header({ name, p, image }) {
           <div className="texts">
             <h2><b>{name}</b></h2>
             <p>{p}</p>
-            <a href="#products">
+            <a href="/checkout">
                 <button>Ver Produto</button>
             </a>
           </div>

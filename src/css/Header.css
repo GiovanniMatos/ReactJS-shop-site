@@ -6,6 +6,7 @@
 
 .texts{
     margin-top: 90px;
+    animation: textOpacity 2s;
 }
 @media screen and (max-width: 500px){
     .texts {
@@ -21,6 +22,17 @@
         position: relative;
         margin-bottom: 80px;
         margin-top: 25rem;
+        animation: zoom 2s;
+    }
+    @keyframes zoom {
+        0%{
+            height: 26rem;
+            width: 26rem;
+        }
+        100%{
+            width: 25rem;
+            height: 25rem;
+        }
     }
 }
 @media (min-width: 700px) and (max-width: 1000px){
@@ -38,16 +50,38 @@
         margin-bottom: 80px;
         margin-left: 75px;
         margin-top: 20rem;
+        animation: zoom 2s;
+    }
+    @keyframes zoom {
+        0%{
+            height: 36rem;
+            width: 36rem;
+        }
+        100%{
+            width: 35rem;
+            height: 35rem;
+        }
     }
 }
 @media (min-width: 1001px) {
     #img {
-        width: 35rem;
-        height: 35rem;
+        width: 34rem;
+        height: 34rem;
         position: relative;
         margin-bottom: 80px;
         margin-left: 75px;
         margin-top: 1rem;
+        animation: zoom 2s;
+    }
+    @keyframes zoom {
+        0%{
+            height: 36rem;
+            width: 36rem;
+        }
+        100%{
+            width: 34rem;
+            height: 34rem;
+        }
     }
 }
 
@@ -64,4 +98,23 @@ button{
 header{
     padding-bottom: 15%;
     background-color: rgb(171 205 207);
+    animation: bgColor 2s;
+}
+
+@keyframes textOpacity {
+    0% {
+        opacity: 90%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes bgColor {
+    0% {
+        background-color: rgb(132, 170, 172);
+    }
+    100% {
+        background-color: rgb(171 205 207);
+    }
 }

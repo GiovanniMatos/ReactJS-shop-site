@@ -1,7 +1,8 @@
 import '../css/SectionProduct.css'
 import Product from './Product'
-import ModalProduct from './ModalProduct'
-import fone from '../assets/maxphoneindex.png'
+import fone2 from '../assets/imagemFone2.jpg'
+import fone3 from '../assets/imagemFone3.jpg'
+import fone4 from '../assets/imagemFone4.jpg'
 // import fone2 from '../assets/foneJBL.png'
 
 export default function SectionProduct(){
@@ -11,25 +12,13 @@ export default function SectionProduct(){
     return(
         <section>
             <div>
-                <h2 id="disponivel">Disponível</h2>
+                {/* <h2 id="textoSection">Mais imagens</h2> */}
                 <div className="cards">
-                    <Product id="card1"
-                    image={fone} title="teste" text="teste"
-                    buttonModal={ <ModalProduct 
-                    href="/checkout"
-                    textButton="Comprar Aqui" 
-                    imagemFone={fone} 
-                    tituloDescricao="Nome Teste"
-                    paragrafoDescricao="Lorem ipsum dolor sit amet, 
-                    consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                    mollit anim id est laborum." 
-                    /> } /> 
-                    {/* href="/product" */}
+                    <div className="images">
+                        <img src={fone2} />
+                        <img src={fone3} />
+                        <img src={fone4} />
+                    </div>
                 </div>
 
             </div>
