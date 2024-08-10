@@ -3,7 +3,7 @@ import '../css/CheckoutPage.css'
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react'
 import ModalCartao from '../components/ModalCartao'
-
+import { AiOutlineSend } from "react-icons/ai";
 
 export default function CheckoutPage(){
     const [quantidade, setQuantidade] = useState(1)
@@ -40,6 +40,14 @@ export default function CheckoutPage(){
 
     return (
         <>
+            <div id="tituloBG">
+                {/* <h1 id="titulo">Nome Teste</h1> */}
+                <div id="subtitulo">
+                    <AiOutlineSend />
+                    <p id="pTitulo"><b>COMPRE AQUI COM DESCONTO!</b></p>
+                </div>
+                <hr/>
+            </div>
             <main>
                 <article>
                     <img id="imagemCheckout" src={fone} />
